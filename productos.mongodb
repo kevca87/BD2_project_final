@@ -1,0 +1,28 @@
+producto1={
+  '_id':21,
+  'nombre':,
+  'categoria':'collar',
+  'contador_vistas':
+  'descripccion':['aros','Plara real 925','']
+  'precio'
+  'imagen':"21.jpg"
+  'cant'://cantidad disponible o en stock
+}
+
+carrito=[{'_id': ,'nombre': ,'categoria':'collar',
+  'conta'
+  des
+  precio
+  'dire_im'
+  'cant_stock'
+}
+]
+categoria+/+imagen
+venta={
+  _id:1
+  fecha:
+  productos=[{id,cant_comprada,precio},{}],
+  total:
+}
+
+db.carrito.
