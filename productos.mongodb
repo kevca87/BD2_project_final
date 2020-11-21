@@ -10,13 +10,13 @@ producto11={
 }
 
 producto12={
-  '_id':11,
-  'nombre':'Rosado fino',
+  '_id':12,
+  'nombre':'Light Pink',
   'categoria':'reloj',
   'contador_vistas':0,
-  'descripccion':[]
-  'precio':19.95,
-  'imagen':'11.jpg',
+  'descripccion':['Reloj','Pulsera en rosado suave']
+  'precio':29.95,
+  'imagen':'12.jpg',
   'cant':20
 }
 
