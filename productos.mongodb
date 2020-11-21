@@ -1,3 +1,25 @@
+producto11={
+  '_id':11,
+  'nombre':'Rosado fino',
+  'categoria':'reloj',
+  'contador_vistas':0,
+  'descripccion':[]
+  'precio':19.95,
+  'imagen':'11.jpg',
+  'cant':20
+}
+
+producto12={
+  '_id':11,
+  'nombre':'Rosado fino',
+  'categoria':'reloj',
+  'contador_vistas':0,
+  'descripccion':[]
+  'precio':19.95,
+  'imagen':'11.jpg',
+  'cant':20
+}
+
 producto1={
   '_id':21,
   'nombre':,
