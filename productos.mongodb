@@ -1,7 +1,41 @@
+//Indices para la busqueda por palabras
+categoria1={
+  '_id':18,
+  'nombre':'Anillos'
+}
+categoria2={
+  '_id':2,
+  'nombre':'Plata'
+}
+categoria3={
+  '_id':3,
+  'nombre':'Oro'
+}
+categoria5={
+  '_id':5,
+  'nombre':'Rolex'
+}
+categoria4={
+  '_id':4,
+  'nombre':'Oro blanco'
+}
+caracteristica3={
+  '_id':3,
+  'nombre':'Baño en oro'
+}
+caracteristica4={
+  '_id':3,
+  'nombre':'Hecho en en oro'
+}
+caracteristica3={
+  '_id':3,
+  'nombre':'Baño de oro'
+}
+
 producto1={
   '_id':1,
   'nombre':'Big Stone',
-  'categoria':'anillo',
+  'id_categoria':[18,3,2],
   'contador_vistas':1,
   'descripccion':['Bañado en oro','Plata de ley 925','Superficie cepillada','Circonita'],
   'precio':49.95,
