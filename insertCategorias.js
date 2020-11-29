@@ -1,0 +1,40 @@
+use('Joyeria');
+categoria1={
+  '_id':1,
+  'nombre':'Anillos'
+}
+categoria2={
+  '_id':2,
+  'nombre':'Pulseras'
+}
+categoria3={
+  '_id':3,
+  'nombre':'Relojes'
+}
+categoria4={
+  '_id':4,
+  'nombre':'Pendientes'
+}
+categoria5={
+  '_id':5,
+  'nombre':'Collares'
+}
+categoria6={
+  '_id':6,
+  'nombre':'Plata'
+}
+categoria7={
+  '_id':7,
+  'nombre':'Oro'
+}
+
+
+db.categorias.insertMany([
+  categoria1,
+  categoria2,
+  categoria3,
+  categoria4,
+  categoria5,
+  categoria6,
+  categoria7
+]);

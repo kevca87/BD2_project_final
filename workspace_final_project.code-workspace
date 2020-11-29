@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "..\\..\\..\\HTML"
+		},
+		{
+			"path": "..\\..\\Flask_PyMongo"
 		}
 	],
 	"settings": {}

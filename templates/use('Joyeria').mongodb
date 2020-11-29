@@ -1,0 +1,28 @@
+use('Joyeria')
+db.categorias.find({'nombre':'Anillos'},{'nombre':0});
+
+/*db.categorias.aggregate([{
+    $lookup: {
+    from: 'productos',
+
+    localField: '_id',
+
+    foreignField: 'id_categoria',
+
+    as: 'productos'
+
+  }}
+  
+]);*/
+/*
+db.productos.aggregate([{
+    $lookup: {
+    from: 'categorias',
+    localField: 'id_categoria',
+
+    foreignField: '_id',
+
+    as: 'categoria'
+
+  }}
+]);*/
