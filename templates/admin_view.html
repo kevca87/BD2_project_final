@@ -13,7 +13,7 @@
         <th scope="col">Precio</th>
         <th scope="col">Categoria</th>
         <th scope="col">Numero de vistas</th>
-        <th scope="col">Cantidad</th>
+        <th scope="col">Ventas</th>
       </tr>
     </thead>
     <tbody>
@@ -26,7 +26,7 @@
         <!--Es equivalente al de arriba
             <td>{{product['categoria']['nombre']}}</td>-->
         <td>{{product['contador_vistas']}}</td>
-        <td>{{product['cant']}}</td>
+        <td>{{product['contador_ventas']}}</td>
         <td class="func1"><a href="/removeproduct?_id={{ product['_id'] }}">
             <button type=submit" class="btn btn-primary">Eliminar</button>
         </a></td>

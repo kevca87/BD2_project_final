@@ -74,14 +74,16 @@ def update_one_product():
     nombre = request.form["nombre"]
     categoria = request.form["categoria"]
     obj_id_categoria=categorys.find_one({'nombre':categoria})
-    id_categoria=obj_id_categoria['_id']
+    str_id_categoria=obj_id_categoria['_id']
+    id_categoria=int(str_id_categoria)
     str_precio = request.form["precio"]
-    precio=int(str_precio)
+    precio=float(str_precio)
     imagen = request.form["imagen"]
     str_contador_vistas = request.form["contador_vistas"]
     contador_vistas=int(str_contador_vistas)
-    cant = request.form["cant"]
-    products.update({'_id':id_prod},{"$set":{'nombre':nombre,'id_categoria':id_categoria,'precio':precio,'imagen':imagen,'contador_vistas':contador_vistas}})
+    str_contador_ventas = request.form["contador_ventas"]
+    contador_ventas=int(str_contador_ventas)
+    products.update_one({'_id':id_prod},{"$set":{'nombre':nombre,'id_categoria':id_categoria,'precio':precio,'imagen':imagen,'contador_vistas':contador_vistas,'contador_ventas':contador_ventas}})
     return redirect('/adminview')
 
 @app.route('/detail/<product_name>')
@@ -104,7 +106,7 @@ def add_to_cart():
     product.update(d1)
     product.update(d2)
     #print(product,' ',type(product))
-    redirect_string='/detail/'+product['nombre']
+    #redirect_string='/detail/'+product['nombre']
     print(cant)
     #print(dic1[product])
     print(id_prod)
@@ -119,6 +121,18 @@ def show_cart():
     print(cart)
     print(total)
     return render_template('my_cart.html',cart=cart,total=total)
+
+@app.route('/sale')
+def complete_sale():
+    for product in cart:
+        string_id_prod=product['_id']
+        string_cant_sale=product['cant_sale']
+        cant_sale=int(string_cant_sale)
+        id_prod=int(string_id_prod)
+        products.update_one({'_id':id_prod},{"$inc":{'contador_ventas':cant_sale}})
+    for i in range(len(cart)):
+        cart.pop()
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run(debug=True) #debug=true para no tener que estar lanzando a cada rato el localhost
