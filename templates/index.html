@@ -1,6 +1,23 @@
 {% extends "layout.html" %}
 <!--Indica que tomara todo el codigo de layout-->
+{% block customcss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <!--url_for es una funcion de python que personalizara la pag con el archivo css-->
+<style>
+  .jumbotron {color: black;}
+</style>
+{% endblock %}
 {% block content %}
+<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="static/BANNER1.jpg" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="static/BANNER_ANILLOS.jpg" class="d-block w-100">
+      </div>
+    </div>
+</div>
 <div class="jumbotron">
     <h1 class="display-4">Joyeria</h1>
     <p class="lead">Esta es la pagina principal de su Joyeria amiga

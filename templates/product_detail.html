@@ -1,4 +1,11 @@
 {% extends "layout.html" %}
+{% block customcss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <!--url_for es una funcion de python que personalizara la pag con el archivo css-->
+<style>
+  .card-body {color: black;}
+</style>
+{% endblock %}
 {% block content %}
 <div class="card mb-3" style="max-width: 1080px;">
     <div class="row no-gutters">
@@ -11,8 +18,7 @@
         <div class="card-body">
             <h1 class="card-title">{{product['nombre']}}</h1>
             <h5 class="card-title">Precio: {{product['precio']}}</h5>
-            <p class="card-text">{{product['descripcion']}}</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <p class="card-text">Descripcion: {{product['descripccion']}}</p>
             <form action="/add_to_cart" method="POST">
                 <div>
                     <input type="hidden" class="form-control" name="id" value="{{product['_id']}}">

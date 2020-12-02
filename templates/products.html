@@ -2,20 +2,22 @@
 {% block customcss %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <!--url_for es una funcion de python que personalizara la pag con el archivo css-->
+<style>
+  .card-body {color: black;}
+</style>
 {% endblock %}
 {% block content %}
     <h1>{{category}}</h1><!--el uso de una variable que se manda al formulario-->
-    <div class="row row-cols-1 row-cols-md-3">
+    <div class="row row-cols-1 row-cols-md-3" >
         {% for product in products %}
-        <div class="col mb-4">
-          <div class="card">
+        <div class="col mb-4" >
+          <div class="card h-100" >
             <a href="{{ url_for('product_detail',product_name=product['nombre']) }}">
-                <img src= "{{url_for('static', filename=product['imagen'])}}" class="card-img-top" >
-
+                <img src= "{{url_for('static', filename=product['imagen'])}}" class="card-img-top"  width="100%" height="100%"/>
             </a>
             <div class="card-body">
-              <h5 class="card-title">{{product['nombre']}}</h5>
-              <p class="card-text">{{product['imagen']}}</p>
+              <h3 class="card-title">{{product['nombre']}}</h3>
+              <h4 class="card-text">{{product['precio']}}</h4>
             </div>
           </div>
         </div>

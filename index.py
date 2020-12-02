@@ -134,6 +134,29 @@ def complete_sale():
         cart.pop()
     return redirect('/')
 
+@app.route('/newproduct')
+def newproduct():
+    return render_template('newproduct.html')
+
+@app.route('/add_new_product', methods=["POST"])
+def add_new_product():
+    str_id_prod = request.form["id"]
+    id_prod=int(str_id_prod)
+    nombre = request.form["nombre"]
+    #categoria = request.form["categoria"]
+    str_id_categoria=request.form["categoria"]
+    id_categoria=int(str_id_categoria)
+    str_precio = request.form["precio"]
+    precio=float(str_precio)
+    imagen = request.form["imagen"]
+    str_contador_vistas = request.form["contador_vistas"]
+    contador_vistas=int(str_contador_vistas)
+    str_contador_ventas = request.form["contador_ventas"]
+    contador_ventas=int(str_contador_ventas)
+    products.insert_one({'_id':id_prod,'nombre':nombre,'id_categoria':id_categoria,'precio':precio,'imagen':imagen,'contador_vistas':contador_vistas,'contador_ventas':contador_ventas})
+    return redirect('/adminview')
+
+
 if __name__ == '__main__':
     app.run(debug=True) #debug=true para no tener que estar lanzando a cada rato el localhost
 
