@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<ul class="list-unstyled">
+    {% for product in cart %}
+    <li class="media">
+      <img src="{{url_for('static', filename=product['imagen'])}}" class="mr-3" width="20%" height="20%">
+      <div class="media-body">
+        <h3 class="mt-0 mb-1">{{product['nombre']}}</h3>
+        <h4 class="mt-0 mb-1">Precio c/u: {{product['precio']}}</h4>
+        <h4 class="mt-0 mb-1">Cantidad: {{product['cant_sale']}}</h4>   
+        <h4 class="mt-0 mb-1">Subtotal: {{product['subtotal']}}</h4>   
+      </div>
+    </li>
+    {% endfor %}
+</ul>
+<div>
+    <h3 class="mt-0 mb-1">TOTAL: {{total}}</h3> 
+</div>
+{% endblock %}

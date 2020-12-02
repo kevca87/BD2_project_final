@@ -3,6 +3,10 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <!--url_for es una funcion de python que personalizara la pag con el archivo css-->
 {% endblock %}
+categoria1={
+    '_id':1,
+    'nombre':'Anillos'
+  }
 {% block content %}
 <h1>PRODUCTOS</h1><!--el uso de una variable que se manda al formulario-->
 <table class="table table-striped table-dark">
@@ -10,10 +14,6 @@
       <tr>
         <th scope="col">id</th>
         <th scope="col">Nombre</th>
-        <th scope="col">Precio</th>
-        <th scope="col">Categoria</th>
-        <th scope="col">Numero de vistas</th>
-        <th scope="col">Cantidad</th>
       </tr>
     </thead>
     <tbody>
@@ -21,16 +21,10 @@
       <tr>
         <td>{{product['_id']}}</td>
         <td>{{product['nombre']}}</td>
-        <td>{{product['precio']}}</td>
-        <td>{{product.get('categoria').get('nombre')}}</td>
-        <!--Es equivalente al de arriba
-            <td>{{product['categoria']['nombre']}}</td>-->
-        <td>{{product['contador_vistas']}}</td>
-        <td>{{product['cant']}}</td>
         <td class="func1"><a href="/removeproduct?_id={{ product['_id'] }}">
             <button type=submit" class="btn btn-primary">Eliminar</button>
         </a></td>
-        <td class="func2"><a href="/updateproduct?_id={{ product['_id'] }}">
+        <td class="func2"><a href="/update?_id={{ product['_id'] }}">
             <button type=submit" class="btn btn-primary">Editar</button>
         </a></td>
       </tr>
