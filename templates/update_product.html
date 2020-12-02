@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block customcss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <!--url_for es una funcion de python que personalizara la pag con el archivo css-->
+{% endblock %}
+{% block content %}
+<h1>EDITAR PRODUCTO</h1><!--el uso de una variable que se manda al formulario-->
+<p>{{product['nombre']}}</p>
+<form action="/update_product" method="POST">
+    <div class="form-group">
+        <label for="staticEmail" class="col-sm-2 col-form-label">id producto: </label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{product['_id']}}" name="id">
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Producto: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" value="{{product['nombre']}}" name="nombre">
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Categoria: </label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{product.get('categoria').get('nombre')}}" name="categoria">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Precio: </label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{product['precio']}}" name="precio">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Imagen: </label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{product['imagen']}}" name="imagen">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Contador de vistas: </label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{product['contador_vistas']}}" name="contador_vistas">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Cantidad: </label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" value="{{product['cant']}}" name="cant">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-10">
+          <input type="submit" class="form-control" value="Guardar cambios">
+        </div>
+    </div>
+</form>
+{% endblock %}

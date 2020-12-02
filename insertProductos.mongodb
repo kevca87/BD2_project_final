@@ -1,14 +1,37 @@
 use('Joyeria')
+
+reporteDiarioProducto1=
+{
+  '_id':,
+  'id_producto':2,
+  'fecha':,
+  'contador_vista':5,
+  'contador_ventas':3
+}
+
+
+
+
+vista={
+  '_id':
+  'id_prod':2,
+  'fecha':
+  'contador':
+}
+
+
+
+
 producto1={
   '_id':1,
   'nombre':'Big Stone',
   'id_categoria':1,
-  'contador_vistas':1,
   'descripccion':['Bañado en oro','Plata de ley 925','Superficie cepillada','Circonita'],
   'precio':49.95,
   'imagen':"1.jpg",
   'cant':10
 }
+
 producto2={
   '_id':2,
   'nombre':'Crystal Moment',
@@ -127,6 +150,10 @@ producto12={
   'imagen':'12.jpg',
   'cant':20
 }
+
+//Coleccion para las vistas y las ventas nomas
+//Si hay tiempo, lo de los clientes
+//El login
 
 producto13={
   '_id':13,
