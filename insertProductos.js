@@ -1,0 +1,221 @@
+use('Joyeria')
+
+
+/*reporteDiarioProducto1=
+{
+  '_id':,
+  'id_producto':2,
+  'fecha':,
+  'contador_vista':5,
+  'contador_ventas':3
+}
+
+
+
+
+vista={
+  '_id':
+  'id_prod':2,
+  'fecha':
+  'contador':
+}
+*/
+
+
+
+producto1={
+  '_id':1,
+  'nombre':'Big Stone',
+  'id_categoria':1,
+  'descripccion':'Bañado en oro, Plata de ley 925 ,Superficie cepillada, Circonita',
+  'precio':49.95,
+  'imagen':"1.jpg",
+  'contador_vistas':0,
+  'contador_ventas':0
+}
+
+producto2={
+  '_id':2,
+  'nombre':'Crystal Moment',
+  'id_categoria':2,
+  'contador_vistas':1,
+  'descripccion':'color plateado, circonitas facetadas, Línea exclusiva Senso di Donna, Con caja de regalo',
+  'precio':24.95,
+  'imagen':"2.jpg",
+  'contador_ventas':0
+}
+producto3={
+  '_id':3,
+  'nombre':'Prima Dona',
+  'id_categoria':2,
+  'contador_vistas':1,
+  'descripccion':'Color oro rosado, Piedras de estrás facetadas, Piedras de estrás facetadas',
+  'precio':29.95,
+  'imagen':'3.jpg',
+  'contador_ventas':0
+}
+producto4={
+  '_id':4,
+  'nombre':'Elegancia sencilla',
+  'id_categoria':1,
+  'contador_vistas':1,
+  'descripccion':'Plata 925, Zirconia',
+  'precio':19.95,
+  'imagen':"4.jpg",
+  'contador_ventas':0
+}
+producto5={
+  '_id':5,
+  'nombre':'Markasita',
+  'id_categoria':1,
+  'contador_vistas':1,
+  'descripccion':'Plata 925, 1,6 cm',
+  'precio':44.95,
+  'imagen':'5.jpg',
+  'contador_ventas':0
+}
+
+producto6={
+  '_id':6,
+  'nombre':'Royal',
+  'id_categoria':1,
+  'contador_vistas':1,
+  'descripccion':'Plata 925, Zirconia cúbica',
+  'precio':24.95,
+  'imagen':"6.jpg",
+  'contador_ventas':0
+}
+
+producto7={
+  '_id':7,
+  'nombre':'Silver Grace',
+  'id_categoria':2,
+  'contador_vistas':1,
+  'descripccion':'Piedras de estrás, plateado, CintaTextil',
+  'precio':7.95,
+  'imagen':'7.jpg',
+  'contador_ventas':0
+}
+
+producto8={
+  '_id':8,
+  'nombre':'Antique Shine',
+  'id_categoria':2,
+  'contador_vistas':1,
+  'descripccion':'Color plateado antiguo, Piedras de estrás, elàstico',
+  'precio':7.95,
+  'imagen':'8.jpg',
+  'contador_ventas':0
+}
+
+producto9={
+  '_id':9,
+  'nombre':'Tablero de ajedrez',
+  'id_categoria':2,
+  'contador_vistas':1,
+  'descripccion':'Pulsera de cordón en plata 925 con diseño de tablero de ajedrez, 19 cm',
+  'precio':19.95,
+  'imagen':'9.jpg',
+  'contador_ventas':0
+}
+
+producto10={
+  '_id':10,
+  'nombre':'Perla',
+  'id_categoria':2,
+  'contador_vistas':1,
+  'descripccion':'aros, Plara real 925',
+  'precio':19.95,
+  'imagen':"10.jpg",
+  'contador_ventas':0
+}
+
+
+producto11={
+  '_id':11,
+  'nombre':'Rosado fino',
+  'id_categoria':3,
+  'contador_vistas':0,
+  'descripccion':' ',
+  'precio':19.95,
+  'imagen':'11.jpg',
+  'contador_ventas':0
+}
+
+producto12={
+  '_id':12,
+  'nombre':'Light Pink',
+  'id_categoria':3,
+  'contador_vistas':0,
+  'descripccion':'Pulsera en rosado suave',
+  'precio':29.95,
+  'imagen':'12.jpg',
+  'contador_ventas':0
+}
+
+//Coleccion para las vistas y las ventas nomas
+//Si hay tiempo, lo de los clientes
+//El login
+
+producto13={
+  '_id':13,
+  'nombre':'Rosedream',
+  'id_categoria':3,
+  'contador_vistas':10,
+  'descripccion':'Color oro rosado, Rosado',
+  'precio':24.95,
+  'imagen':'13.jpg',
+  'contador_ventas':0
+}
+
+producto14={
+  '_id':14,
+  'nombre':'Honey Colored',
+  'id_categoria':3,
+  'contador_vistas':5,
+  'descripccion':'Amarillo, Negro, Imitacion de cuero, Parte posterior acero inoxidable',
+  'precio':19.95,
+  'imagen':'14.jpg',
+  'contador_ventas':0
+}
+
+producto15={
+  '_id':15,
+  'nombre':'Silver Elegance',
+  'id_categoria':3,
+  'contador_vistas':15,
+  'descripccion':'Plateado, Parte posterior acero inoxidable',
+  'precio':29.95,
+  'imagen':'15.jpg',
+  'contador_ventas':0
+}
+
+producto18={
+  '_id':18,
+  'nombre':'Simple Chic',
+  'id_categoria':3,
+  'contador_vistas':15,
+  'descripccion':'Plateado, Rose, Pure Lines, Parte posterior acero inoxidable',
+  'precio':34.95,
+  'imagen':'18.jpg',
+  'contador_ventas':0
+}
+
+db.productos.insertMany([
+  producto1,
+  producto2,
+  producto3,
+  producto4,
+  producto5,
+  producto6,
+  producto7,
+  producto8,
+  producto9,
+  producto10,
+  producto11,
+  producto12,
+  producto13,
+  producto14,
+  producto15,
+  producto18
+]);
